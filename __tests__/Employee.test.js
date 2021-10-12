@@ -46,3 +46,5 @@ test('getRole() should return role as employee', () => {
     const employee = new Employee('Joshua', 1, 'fakeemail@fakeemail.com', 'Employee');
     expect(employee.getRole()).toBe(role);
 });
+
+module.exports = Employee;
