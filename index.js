@@ -18,6 +18,11 @@ function runInitalPrompts() {
     },
     {
         type: 'input',
+        message: 'What is your ID number?',
+        name: 'id'
+    },
+    {
+        type: 'input',
         message: 'What is your email?',
         name: 'email'
     },
@@ -153,7 +158,7 @@ async function run() {
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" href="">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
                 <title>Document</title>
                 <style>
                     .row {
@@ -188,7 +193,7 @@ async function run() {
             <body>
                 <nav class="navbar-dark bg-dark justofy-content-center align-items-center">
                     <span class="navbar-brand mb-0 h1">
-                        <h1>My Team</h1>
+                        <h1>My Team Profile</h1>
                     </span>
                 </nav>
                 <div class="row">
@@ -198,11 +203,9 @@ async function run() {
         </html>
     `;
 
-    console.log(html);
-    const fs = require('fs');
     fs.writeFile('team.html', html, function (err) {
         if (err) throw err;
-        console.log('File complete!');
+        console.log('File complete! find team.html in team-profile-generator directory');
     });
 }
 
